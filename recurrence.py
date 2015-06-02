@@ -27,7 +27,7 @@ def penalty(ttime, *parms):
     else:
         pen = 0.
         for j in range(len(omega)-1):
-            pen = pen - np.cos(((omega[j]-omega[j+1])*ttime)%(2*pi))
+            pen = pen - np.cos(((omega[j]-omega[j+1])*ttime) % (2*pi))
 
     return pen
 
@@ -105,7 +105,7 @@ if __name__ == '__main__':
               % (timem, penmin))
 
         for i in range(len(PARAMS)):
-            angle = (timem*PARAMS[i])%(2*pi)
+            angle = (timem*PARAMS[i]) % (2*pi)
             print(" planet %2d:  angle rad = %10.4f  deg = %10.4f"
                   % (i, angle, angle/pi*180))
 
